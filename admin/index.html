@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台管理 - 貝達國際貿易有限公司</title>
+    <meta name="description" content="貝達國際貿易後台管理系統">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body class="admin-body">
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-screen">
+        <div class="login-container">
+            <div class="login-header">
+                <img src="../assets/images/logo.png" alt="貝達國際貿易" class="login-logo">
+                <h1>後台管理系統</h1>
+                <p>請登入以繼續</p>
+            </div>
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="username">用戶名</label>
+                    <input type="text" id="username" name="username" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">密碼</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">登入</button>
+            </form>
+            <div class="login-footer">
+                <p>預設帳號：admin / 密碼：admin123</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="admin-dashboard" class="admin-dashboard" style="display: none;">
+        <!-- Admin Header -->
+        <header class="admin-header">
+            <div class="admin-nav">
+                <div class="admin-brand">
+                    <img src="../assets/images/logo.png" alt="貝達國際貿易" class="admin-logo">
+                    <span class="admin-brand-name">貝達國際貿易 - 後台管理</span>
+                </div>
+                <div class="admin-actions">
+                    <span class="admin-user">歡迎，<span id="current-user">Admin</span></span>
+                    <button class="btn btn-outline" id="logout-btn">登出</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Admin Main -->
+        <main class="admin-main">
+            <div class="admin-sidebar">
+                <nav class="sidebar-nav">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item active">
+                            <a href="#dashboard" class="sidebar-link" data-page="dashboard">
+                                <span class="sidebar-icon">📊</span>
+                                <span>儀表板</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#news" class="sidebar-link" data-page="news">
+                                <span class="sidebar-icon">📰</span>
+                                <span>最新消息管理</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#contacts" class="sidebar-link" data-page="contacts">
+                                <span class="sidebar-icon">📧</span>
+                                <span>聯絡表單</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#products" class="sidebar-link" data-page="products">
+                                <span class="sidebar-icon">📦</span>
+                                <span>產品管理</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#services" class="sidebar-link" data-page="services">
+                                <span class="sidebar-icon">🛠️</span>
+                                <span>服務管理</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#settings" class="sidebar-link" data-page="settings">
+                                <span class="sidebar-icon">⚙️</span>
+                                <span>系統設定</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="admin-content">
+                <!-- Dashboard Page -->
+                <div class="admin-page active" id="dashboard-page">
+                    <div class="page-header">
+                        <h1>儀表板</h1>
+                        <p>系統概覽與統計資料</p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">📰</div>
+                            <div class="stat-content">
+                                <h3 class="stat-number">12</h3>
+                                <p class="stat-label">最新消息</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📧</div>
+                            <div class="stat-content">
+                                <h3 class="stat-number">48</h3>
+                                <p class="stat-label">聯絡表單</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📦</div>
+                            <div class="stat-content">
+                                <h3 class="stat-number">6</h3>
+                                <p class="stat-label">產品分類</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">👥</div>
+                            <div class="stat-content">
+                                <h3 class="stat-number">156</h3>
+                                <p class="stat-label">網站訪客</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-sections">
+                        <div class="section-card">
+                            <h3>最近聯絡表單</h3>
+                            <div class="recent-contacts">
+                                <div class="contact-item">
+                                    <div class="contact-info">
+                                        <h4>張先生</h4>
+                                        <p>詢問工業五金採購服務</p>
+                                    </div>
+                                    <span class="contact-time">2小時前</span>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-info">
+                                        <h4>李經理</h4>
+                                        <p>需要供應商媒合服務</p>
+                                    </div>
+                                    <span class="contact-time">5小時前</span>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-info">
+                                        <h4>王總</h4>
+                                        <p>詢問大批量訂單報價</p>
+                                    </div>
+                                    <span class="contact-time">1天前</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-card">
+                            <h3>系統狀態</h3>
+                            <div class="system-status">
+                                <div class="status-item">
+                                    <span class="status-label">網站狀態</span>
+                                    <span class="status-indicator online">正常運行</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-label">資料庫</span>
+                                    <span class="status-indicator online">連接正常</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-label">備份狀態</span>
+                                    <span class="status-indicator warning">需要備份</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Management Page -->
+                <div class="admin-page" id="news-page">
+                    <div class="page-header">
+                        <h1>最新消息管理</h1>
+                        <button class="btn btn-primary" id="add-news-btn">新增消息</button>
+                    </div>
+                    
+                    <div class="news-table-container">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>標題</th>
+                                    <th>分類</th>
+                                    <th>日期</th>
+                                    <th>狀態</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>貝達國際貿易正式成立</td>
+                                    <td><span class="category-badge company">公司消息</span></td>
+                                    <td>2024-03-15</td>
+                                    <td><span class="status-badge published">已發布</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline">編輯</button>
+                                        <button class="btn btn-sm btn-danger">刪除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2024年全球貿易趨勢分析</td>
+                                    <td><span class="category-badge industry">產業資訊</span></td>
+                                    <td>2024-03-10</td>
+                                    <td><span class="status-badge published">已發布</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline">編輯</button>
+                                        <button class="btn btn-sm btn-danger">刪除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>亞洲供應鏈轉型新機遇</td>
+                                    <td><span class="category-badge market">市場趨勢</span></td>
+                                    <td>2024-03-05</td>
+                                    <td><span class="status-badge draft">草稿</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline">編輯</button>
+                                        <button class="btn btn-sm btn-danger">刪除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Contacts Management Page -->
+                <div class="admin-page" id="contacts-page">
+                    <div class="page-header">
+                        <h1>聯絡表單管理</h1>
+                        <p>管理客戶聯絡請求和詢問</p>
+                    </div>
+                    
+                    <div class="contacts-table-container">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>公司</th>
+                                    <th>郵件</th>
+                                    <th>電話</th>
+                                    <th>服務</th>
+                                    <th>時間</th>
+                                    <th>狀態</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>張先生</td>
+                                    <td>精密工業有限公司</td>
+                                    <td>zhang@precision.com</td>
+                                    <td>0912-345-678</td>
+                                    <td>採購代理</td>
+                                    <td>2024-03-20 14:30</td>
+                                    <td><span class="status-badge new">新</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary">查看</button>
+                                        <button class="btn btn-sm btn-outline">回覆</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>李經理</td>
+                                    <td>國際貿易公司</td>
+                                    <td>li@tradeco.com</td>
+                                    <td>0987-654-321</td>
+                                    <td>供應商媒合</td>
+                                    <td>2024-03-20 10:15</td>
+                                    <td><span class="status-badge processing">處理中</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary">查看</button>
+                                        <button class="btn btn-sm btn-outline">回覆</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Products Management Page -->
+                <div class="admin-page" id="products-page">
+                    <div class="page-header">
+                        <h1>產品管理</h1>
+                        <button class="btn btn-primary" id="add-product-btn">新增產品</button>
+                    </div>
+                    
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../assets/images/industrial-parts.jpg" alt="工業五金">
+                            </div>
+                            <div class="product-info">
+                                <h3>工業五金</h3>
+                                <p>各類工業用五金零件、工具及配件</p>
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-outline">編輯</button>
+                                    <button class="btn btn-sm btn-danger">刪除</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../assets/images/machinery-parts.jpg" alt="機械零件">
+                            </div>
+                            <div class="product-info">
+                                <h3>機械零件</h3>
+                                <p>精密機械零件、軸承、齒輪等</p>
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-outline">編輯</button>
+                                    <button class="btn btn-sm btn-danger">刪除</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Management Page -->
+                <div class="admin-page" id="services-page">
+                    <div class="page-header">
+                        <h1>服務管理</h1>
+                        <button class="btn btn-primary" id="add-service-btn">新增服務</button>
+                    </div>
+                    
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-content">
+                                <h3>採購代理</h3>
+                                <p>專業採購團隊為您尋找最優質的供應商和產品</p>
+                            </div>
+                            <div class="service-actions">
+                                <button class="btn btn-sm btn-outline">編輯</button>
+                                <button class="btn btn-sm btn-danger">刪除</button>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-content">
+                                <h3>進出口服務</h3>
+                                <p>完整的進出口流程管理，確保貨物順利通關</p>
+                            </div>
+                            <div class="service-actions">
+                                <button class="btn btn-sm btn-outline">編輯</button>
+                                <button class="btn btn-sm btn-danger">刪除</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Page -->
+                <div class="admin-page" id="settings-page">
+                    <div class="page-header">
+                        <h1>系統設定</h1>
+                        <p>管理網站基本設定和配置</p>
+                    </div>
+                    
+                    <div class="settings-sections">
+                        <div class="settings-section">
+                            <h3>公司資訊</h3>
+                            <form class="settings-form">
+                                <div class="form-group">
+                                    <label>公司名稱</label>
+                                    <input type="text" class="form-control" value="貝達國際貿易有限公司">
+                                </div>
+                                <div class="form-group">
+                                    <label>公司地址</label>
+                                    <input type="text" class="form-control" value="台灣台北市信義區信義路五段7號">
+                                </div>
+                                <div class="form-group">
+                                    <label>聯絡電話</label>
+                                    <input type="text" class="form-control" value="+886-2-1234-5678">
+                                </div>
+                                <div class="form-group">
+                                    <label>電子郵件</label>
+                                    <input type="email" class="form-control" value="info@bestasv.com">
+                                </div>
+                                <button type="submit" class="btn btn-primary">儲存設定</button>
+                            </form>
+                        </div>
+
+                        <div class="settings-section">
+                            <h3>系統設定</h3>
+                            <form class="settings-form">
+                                <div class="form-group">
+                                    <label>網站標題</label>
+                                    <input type="text" class="form-control" value="貝達國際貿易有限公司">
+                                </div>
+                                <div class="form-group">
+                                    <label>網站描述</label>
+                                    <textarea class="form-control" rows="3">專業的進出口服務夥伴，連接全球商機，創造無限可能</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>預設語言</label>
+                                    <select class="form-control">
+                                        <option value="zh-TW" selected>中文繁體</option>
+                                        <option value="en">English</option>
+                                        <option value="ja">日本語</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">儲存設定</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="admin.js"></script>
+</body>
+</html>

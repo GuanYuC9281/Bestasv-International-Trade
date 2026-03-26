@@ -1,0 +1,509 @@
+/* Responsive Design */
+
+/* Extra Large Devices (1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Large Devices (992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-title {
+        font-size: 42px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+}
+
+/* Medium Devices (768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .footer-brand {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+    
+    .services-grid,
+    .categories-grid,
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .advantages-grid,
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Devices (576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: white;
+        transition: left 0.3s ease;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 18px;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .nav-actions {
+        gap: 15px;
+    }
+    
+    .hero {
+        padding: 100px 0 60px;
+        min-height: auto;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section-title {
+        font-size: 26px;
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+    }
+    
+    .services-grid,
+    .categories-grid,
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .advantages-grid,
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .advantage-item,
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .advantage-number {
+        margin: 0 auto;
+    }
+    
+    .step-number {
+        margin: 0 auto;
+    }
+    
+    .cta-actions {
+        align-items: center;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-brand {
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* Extra Small Devices (575px and down) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .brand-logo {
+        width: 35px;
+    }
+    
+    .brand-name {
+        font-size: 18px;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: white;
+        transition: left 0.3s ease;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 15px;
+    }
+    
+    .nav-link {
+        font-size: 16px;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .nav-actions {
+        gap: 10px;
+    }
+    
+    .language-selector .lang-select {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .hero {
+        padding: 80px 0 50px;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .section-subtitle {
+        font-size: 15px;
+    }
+    
+    .services-grid,
+    .categories-grid,
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon img {
+        width: 30px;
+    }
+    
+    .advantages-grid,
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .advantage-item,
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .advantage-number {
+        font-size: 36px;
+        min-width: 60px;
+        height: 60px;
+        margin: 0 auto;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        margin: 0 auto;
+    }
+    
+    .category-content {
+        padding: 20px;
+    }
+    
+    .news-content {
+        padding: 20px;
+    }
+    
+    .cta-title {
+        font-size: 28px;
+    }
+    
+    .cta-subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .cta-actions {
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .cta-contact {
+        font-size: 14px;
+    }
+    
+    .footer {
+        padding: 40px 0 15px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+    
+    .footer-brand {
+        text-align: center;
+    }
+    
+    .footer-logo {
+        width: 50px;
+    }
+    
+    .footer-brand-name {
+        font-size: 18px;
+    }
+    
+    .footer-title {
+        font-size: 15px;
+    }
+    
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+    
+    .footer-links a {
+        font-size: 14px;
+    }
+    
+    .contact-item {
+        font-size: 14px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-copyright {
+        font-size: 12px;
+    }
+    
+    .footer-social {
+        gap: 12px;
+    }
+    
+    .social-link {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .social-link img {
+        width: 16px;
+    }
+}
+
+/* Special Cases */
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .section-title {
+        font-size: 22px;
+    }
+    
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    
+    .btn-large {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+}
+
+/* Landscape Orientation for Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 60px 0 40px;
+    }
+    
+    .nav-menu {
+        height: calc(100vh - 60px);
+        top: 60px;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .brand-logo,
+    .hero-img,
+    .service-icon img,
+    .category-image img,
+    .news-image img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .footer,
+    .hero-actions,
+    .contact-cta,
+    .nav-toggle,
+    .language-selector {
+        display: none;
+    }
+    
+    .hero {
+        background: none;
+        padding: 40px 0;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    section {
+        padding: 30px 0;
+        page-break-inside: avoid;
+    }
+    
+    .service-card,
+    .category-card,
+    .news-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
