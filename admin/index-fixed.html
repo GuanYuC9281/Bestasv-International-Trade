@@ -6,7 +6,6 @@
     <title>貝達國際貿易 - 後台管理系統</title>
     <meta name="description" content="貝達國際貿易後台管理系統">
     <link rel="stylesheet" href="admin.css">
-    <link rel="stylesheet" href="admin-monitoring.css">
     <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -79,12 +78,6 @@
                         <a href="#settings" class="sidebar-link" data-page="settings">
                             <span class="sidebar-icon">⚙️</span>
                             <span class="sidebar-text">系統設定</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#monitoring" class="sidebar-link" data-page="monitoring">
-                            <span class="sidebar-icon">📊</span>
-                            <span class="sidebar-text">性能監控</span>
                         </a>
                     </li>
                 </ul>
@@ -240,13 +233,13 @@
                 </div>
             </div>
 
-            <!-- Settings Page - CORRECTED VERSION -->
+            <!-- Settings Page -->
             <div class="admin-page" id="settings-page">
                 <div class="settings-sections">
                     <!-- Company Settings -->
                     <div class="settings-section">
                         <h3>公司設定</h3>
-                        <form id="company-settings-form" class="settings-form">
+                        <form class="settings-form" id="company-settings-form">
                             <div class="form-group">
                                 <label for="company_name">公司名稱</label>
                                 <input type="text" id="company_name" name="company_name" class="form-control" value="貝達國際貿易有限公司">
@@ -274,7 +267,7 @@
                     <!-- Contact Settings -->
                     <div class="settings-section">
                         <h3>聯絡設定</h3>
-                        <form id="contact-settings-form" class="settings-form">
+                        <form class="settings-form" id="contact-settings-form">
                             <div class="form-group">
                                 <label for="contact_phone_cta">CTA電話</label>
                                 <input type="text" id="contact_phone_cta" name="contact_phone_cta" class="form-control" value="電話: +886-2-1234-5678">
@@ -306,7 +299,7 @@
                     <!-- SEO Settings -->
                     <div class="settings-section">
                         <h3>SEO設定</h3>
-                        <form id="seo-settings-form" class="settings-form">
+                        <form class="settings-form" id="seo-settings-form">
                             <div class="form-group">
                                 <label for="meta_title">網站標題</label>
                                 <input type="text" id="meta_title" name="meta_title" class="form-control" value="貝達國際貿易有限公司 - 專業進出口服務">
@@ -324,38 +317,11 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Performance Monitoring Page -->
-            <div class="admin-page" id="monitoring-page">
-                <div class="page-header">
-                    <h2>性能監控</h2>
-                    <button id="refresh-monitoring-btn" class="btn btn-outline">重新整理</button>
-                </div>
-                <div class="performance-section">
-                    <div class="performance-metrics">
-                        <!-- Performance metrics will be populated here -->
-                    </div>
-                    <div class="performance-charts">
-                        <div id="database-chart" class="chart-container">
-                            <h4>資料庫操作時間</h4>
-                            <canvas width="400" height="200"></canvas>
-                        </div>
-                        <div id="memory-chart" class="chart-container">
-                            <h4>記憶體使用量</h4>
-                            <canvas width="400" height="200"></canvas>
-                        </div>
-                        <div id="sync-chart" class="chart-container">
-                            <h4>同步操作時間</h4>
-                            <canvas width="400" height="200"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </main>
     </div>
 
     <!-- Scripts -->
     <script src="database.js"></script>
-    <script src="admin-working.js"></script>
+    <script src="admin-new.js"></script>
 </body>
 </html>

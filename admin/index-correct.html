@@ -6,7 +6,6 @@
     <title>貝達國際貿易 - 後台管理系統</title>
     <meta name="description" content="貝達國際貿易後台管理系統">
     <link rel="stylesheet" href="admin.css">
-    <link rel="stylesheet" href="admin-monitoring.css">
     <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -79,12 +78,6 @@
                         <a href="#settings" class="sidebar-link" data-page="settings">
                             <span class="sidebar-icon">⚙️</span>
                             <span class="sidebar-text">系統設定</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#monitoring" class="sidebar-link" data-page="monitoring">
-                            <span class="sidebar-icon">📊</span>
-                            <span class="sidebar-text">性能監控</span>
                         </a>
                     </li>
                 </ul>
@@ -324,38 +317,11 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Performance Monitoring Page -->
-            <div class="admin-page" id="monitoring-page">
-                <div class="page-header">
-                    <h2>性能監控</h2>
-                    <button id="refresh-monitoring-btn" class="btn btn-outline">重新整理</button>
-                </div>
-                <div class="performance-section">
-                    <div class="performance-metrics">
-                        <!-- Performance metrics will be populated here -->
-                    </div>
-                    <div class="performance-charts">
-                        <div id="database-chart" class="chart-container">
-                            <h4>資料庫操作時間</h4>
-                            <canvas width="400" height="200"></canvas>
-                        </div>
-                        <div id="memory-chart" class="chart-container">
-                            <h4>記憶體使用量</h4>
-                            <canvas width="400" height="200"></canvas>
-                        </div>
-                        <div id="sync-chart" class="chart-container">
-                            <h4>同步操作時間</h4>
-                            <canvas width="400" height="200"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </main>
     </div>
 
     <!-- Scripts -->
     <script src="database.js"></script>
-    <script src="admin-working.js"></script>
+    <script src="admin-final.js"></script>
 </body>
 </html>
